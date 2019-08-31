@@ -5,6 +5,9 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const _ = require("lodash");	
+const session = require("express-session");
+const passport = require("passport");
+const passportLocalMongoose = require("passport-local-mongoose");
 
 const app = express();
 
@@ -12,8 +15,27 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
+app.use(session({secret: 'S3CR3T', saveUninitialized: false, resave: false}));
+
+app.use(passport.initialize()); 
+app.use(passport.session());
 
 mongoose.connect("mongodb+srv://admin-adhish:test123@cluster0-aap6q.mongodb.net/blogDB", {useNewUrlParser: true});
+mongoose.set("useCreateIndex", true);
+
+const userSchema = new mongoose.Schema({
+  email: String,
+  password: String
+});
+
+userSchema.plugin(passportLocalMongoose);
+
+const User = new mongoose.model("User", userSchema);
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 const postSchema = {
 	title: String,
@@ -36,6 +58,7 @@ const Film = mongoose.model("Film", filmSchema);
 app.route("/films")
 
 .get(function(req, res){
+  if (req.isAuthenticated()){
   Film.find(function(err, foundFilms){
     if (!err) {
       res.render("films", {
@@ -45,6 +68,9 @@ app.route("/films")
       res.send(err);
     }
   });
+} else {
+    res.redirect("/login");
+  } 
 })
 
 .post(function(req, res){
@@ -57,21 +83,69 @@ app.route("/films")
 });
 
 app.get("/", function(req, res){
+  res.render("login");
+});
 
-    res.render("login")
+app.get("/login", function(req, res){
+  res.render("login");
+});
+
+app.get("/register", function(req, res){
+  res.render("register");
+});
+
+app.post("/register", function(req, res){
+
+  User.register({username: req.body.username}, req.body.password, function(err, user){
+    if (err){
+      console.log(err);
+      res.redirect("register");
+    } else {
+      passport.authenticate("local")(req, res, function(){
+        res.redirect("/home");
+      });
+    }
+  });
+});
+
+app.post("/login", function(req, res){
+
+  const user = new User({
+    username: req.body.username,
+    password: req.body.password
+  });
+
+  req.login(user, function(err){
+    if (err) {
+       $("#notfound").css('visibility', 'visible');
+    } else {
+      passport.authenticate("local")(req, res, function(){
+        res.redirect("/home");
+      });
+    }
+  })
+
+
 });
 
 app.get("/home", function(req, res){
-
-  Post.find({}, function(err, posts){
+  if (req.isAuthenticated()){
+     Post.find({}, function(err, posts){
     res.render("home", {
       posts: posts
       });
   });
+  } else {
+    res.redirect("/login");
+  } 
 });
 
 app.get("/compose", function(req, res){
+  if (req.isAuthenticated()){
 	res.render("compose");
+} else {
+  res.redirect("/login");
+}
 });
 
 app.post("/compose", function(req, res){
@@ -83,13 +157,13 @@ app.post("/compose", function(req, res){
 
   post.save(function(err){
     if (!err){
-        res.redirect("/");
+        res.redirect("/home");
     }
   });
 });
 
 app.get("/posts/:postId", function(req, res){	
-	
+  if (req.isAuthenticated()){
 	const requestedPostId = req.params.postId;
 	Post.findOne({_id: requestedPostId}, function(err, post){
      res.render("post", {
@@ -97,8 +171,15 @@ app.get("/posts/:postId", function(req, res){
       content: post.content
    });
  });
-
+} else {
+  res.redirect("/login");
+}
 });	
+
+app.get("/logout", function(req, res){
+  req.logout();
+  res.redirect("/");
+});
 
 app.get("/about", function(req, res){
 	res.render("about");
