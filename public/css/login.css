@@ -1,0 +1,153 @@
+html,body{
+	background: url("https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    display: block;
+    background-color: #c1b399;
+    max-width: 50%;
+    margin: 0 auto;
+    height: 370px;
+    width: 600px;
+    -webkit-filter: blur(70px);
+    -moz-filter: blur(70px);
+    -o-filter: blur(70px);
+    -ms-filter: blur(70px);
+    filter: blur(70px);
+}
+
+.card{
+height: 320px;
+margin-top: 320px;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.content{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.center{
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 90px;
+    height: 300px;
+    width: 600px;
+}
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.btn {
+        background-color: rgb(245, 197, 24);
+}
+
+#btntext{
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+    margin-block-end: 0;
+}
+
+.card-body{
+padding-left: 1.25rem;
+padding-right: 1.25rem;
+padding-bottom: 0;
+padding-top: 1.25rem;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+h1{
+    font-size: 100px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px #FFFFFF;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+#notfound {
+	color: white;
+}

@@ -1,0 +1,60 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Register Page</title>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
+    <style>
+    
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="d-flex justify-content-center h-100">
+     <div class="background-image"></div>
+            <div class="center content">
+                <h1>Quizophile</h1>
+                <button type="button" class="btn btn-default btn-lg" disabled="disabled"><span id="btntext">Happy Quizing</span></button>
+            </div>
+        <div style="height:260px;" class="card">
+            <div class="card-header">
+                <h3>Sign Up</h3>
+                
+            </div>
+            <div style="height: 80px;" class="card-body">
+                <form method="post" action="/">
+                  <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                        
+                        <input type="text" id="username" class="form-control" placeholder="Username" name="username" required>
+                        
+                    </div>
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                        </div>
+                        <input id="password" type="password" class="form-control" placeholder="Password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <input id="register" type="submit" value="Register" class="btn float-right login_btn">
+                    </div>
+                </form>
+                <p id="exists" style="visibility: hidden; color: white;">Username exists</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/scripts/register.js"></script>
+</body>
+</html>

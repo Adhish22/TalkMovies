@@ -1,0 +1,65 @@
+h3.homeTitle {
+	text-align: center;
+	font-weight:bold;
+	margin-top: 25px;
+}
+
+p.intro {
+	font-size: 16px;
+	padding-top: 7px;
+}
+
+div.rightTitle {
+margin:0px 0px 0px 0px;
+padding: 5px 5px 5px 5px;
+background-color: #333;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color:white;
+}
+
+h3.rightHeading {
+	text-align: center;
+}
+
+div.rightdiv {
+background-color: #2F4F4F;
+position: absolute;
+right:0;
+max-width: 300px;
+padding: 10px 10px 10px 10px;
+border-color: rgb(245, 197, 24);
+border-width: 5px;
+border-style: ridge;
+}
+
+div.title {
+	text-align: center;
+	text-decoration: underline;
+}
+
+div.box {
+	background-color: #333;
+	margin-top: 15px;
+	padding: 10px 10px 10px 10px;
+}
+
+.postCollage {
+	max-width: 250px;
+}
+
+div.leftdiv {
+	max-width: 900px;
+	margin-right: 20px;
+}
+
+.content {
+clear:both;
+height: auto;
+}
+

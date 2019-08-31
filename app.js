@@ -6,8 +6,6 @@ const ejs = require("ejs");
 const mongoose = require("mongoose");
 const _ = require("lodash");	
 
-const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
-
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -22,9 +20,48 @@ const postSchema = {
 	content: String
 };
 
-const Post = mongoose.model("Post", postSchema);	
+const Post = mongoose.model("Post", postSchema);
+
+const filmSchema = new mongoose.Schema({
+  title: String,
+  synopsis: String,
+  genre: String,
+  cast: String,
+  rating: String,
+  review: String
+});
+
+const Film = mongoose.model("Film", filmSchema);
+
+app.route("/films")
+
+.get(function(req, res){
+  Film.find(function(err, foundFilms){
+    if (!err) {
+      res.render("films", {
+        foundFilms: foundFilms
+      });
+    } else {
+      res.send(err);
+    }
+  });
+})
+
+.post(function(req, res){
+
+  const newFilm = new Film({
+    title: req.body.title,
+    synopsis: req.body.synopsis,
+    title: req.body.title
+  });
+});
 
 app.get("/", function(req, res){
+
+    res.render("login")
+});
+
+app.get("/home", function(req, res){
 
   Post.find({}, function(err, posts){
     res.render("home", {
@@ -68,7 +105,7 @@ app.get("/about", function(req, res){
 });
 
 app.get("/contact", function(req, res){
-	res.render("contact", {contact: contactContent});
+	res.render("contact");
 });
 
 app.listen(3000, function() {
