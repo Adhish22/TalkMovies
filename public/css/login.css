@@ -130,14 +130,11 @@ margin-right: 5px;
 }
 
 .login_btn{
-color: black;
-background-color: #FFC312;
 width: 100px;
 }
 
 .login_btn:hover{
-color: black;
-background-color: white;
+background-color: #A9A9A9;
 }
 
 .links{
@@ -151,4 +148,8 @@ color: black;
 
 #notfound {
 	color: white;
+}
+
+.card-footer {
+    margin-top: 30px;
 }

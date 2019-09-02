@@ -8,6 +8,7 @@ const _ = require("lodash");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
+// const flash = require("req-flash");
 
 const app = express();
 
@@ -16,16 +17,18 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(session({secret: 'S3CR3T', saveUninitialized: false, resave: false}));
+// app.use(flash());
 
 app.use(passport.initialize()); 
 app.use(passport.session());
 
 mongoose.connect("mongodb+srv://admin-adhish:test123@cluster0-aap6q.mongodb.net/blogDB", {useNewUrlParser: true});
 mongoose.set("useCreateIndex", true);
+mongoose.set('useFindAndModify', false);
 
 const userSchema = new mongoose.Schema({
-  email: String,
-  password: String
+  username: String,
+  password: String,
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -47,7 +50,7 @@ const Post = mongoose.model("Post", postSchema);
 const filmSchema = new mongoose.Schema({
   title: String,
   synopsis: String,
-  genre: String,
+  genre: Array,
   cast: String,
   rating: String,
   review: String
@@ -83,8 +86,16 @@ app.route("/films")
 });
 
 app.get("/", function(req, res){
-  res.render("login");
-});
+    if (req.isAuthenticated()){
+     Post.find({}, function(err, posts){
+    res.render("home", {
+      posts: posts
+      });
+  });
+  } else {
+    res.redirect("/login");
+  } 
+  });
 
 app.get("/login", function(req, res){
   res.render("login");
@@ -99,7 +110,7 @@ app.post("/register", function(req, res){
   User.register({username: req.body.username}, req.body.password, function(err, user){
     if (err){
       console.log(err);
-      res.redirect("register");
+      res.redirect("/register"); 
     } else {
       passport.authenticate("local")(req, res, function(){
         res.redirect("/home");
@@ -109,24 +120,43 @@ app.post("/register", function(req, res){
 });
 
 app.post("/login", function(req, res){
-
-  const user = new User({
+  const user =  new User({
     username: req.body.username,
     password: req.body.password
   });
 
   req.login(user, function(err){
-    if (err) {
-       $("#notfound").css('visibility', 'visible');
+    if (err){
+      console.log(err);
     } else {
       passport.authenticate("local")(req, res, function(){
         res.redirect("/home");
       });
     }
-  })
-
-
+  });
 });
+
+
+// app.post("/", function(req, res){
+
+
+//   const user = new User({
+//     username: req.body.username,
+//     password: req.body.password
+//   });
+
+//   req.login(user, function(err){
+//     if (err) {
+//       console.log(err);
+//     } else {
+//       passport.authenticate("local")(req, res, function(){
+//         res.redirect("/home");
+//       });
+//     }
+//   });
+
+
+
 
 app.get("/home", function(req, res){
   if (req.isAuthenticated()){
@@ -188,6 +218,8 @@ app.get("/about", function(req, res){
 app.get("/contact", function(req, res){
 	res.render("contact");
 });
+
+
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");

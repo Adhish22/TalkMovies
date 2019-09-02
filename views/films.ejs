@@ -51,7 +51,7 @@
                         </p>
                         <span class="badge badge-dark"><%= foundFilms[1].genre %></span>
                         <br>
-                        <p class="font-italic"><%= foundFilms[i].cast %></p>
+                        <p class="font-italic"><%= foundFilms[1].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
                         <p><strong><%= foundFilms[1].rating %></strong></p>
@@ -71,20 +71,20 @@
                   <img style="float:left;" src="images/Whiplash.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Whiplash</h3>
+                        <h3><%= foundFilms[2].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+                        <p><%= foundFilms[2].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Music</span>
+                        <span class="badge badge-dark"><%= foundFilms[2].genre %></span> <span class="badge badge-dark">Music</span>
                         <br>
-                        <p class="font-italic">Miles Teller, J.K. Simmons, Melissa Benoist</p>
+                        <p class="font-italic"><%= foundFilms[2].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 9.6/10</strong></p>
+                        <p><strong><%= foundFilms[2].rating %></strong></p>
                         <br>
                         <button type="button" class="reviewbtn btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px; border-color:#708090; display:none;" class="review">"Tension, tension, tension. This film is a precise tension-building film, full of beautifully staged pieces and cinematography. But above all else, a love towards music and the challenges it often represents if you want to get to the very top. But I can promise one thing, this film will give you goosebumps and it will end with you giving a standing ovation. J.K. Simmons won an Oscar (Best Performance by an Actor in a Supporting Role) for his portrayal as the brutal music coach, Terence Fletcher."</div>
+                        <div style= "border-radius:10px; border-color:#708090; display:none;" class="review">"<%= foundFilms[2].review %>"</div>
                      </div>
                   </div>
                </div>
@@ -98,19 +98,19 @@
                   <img style="float:left;" src="images/watchmen.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Watchmen</h3>
+                        <h3><%= foundFilms[3].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> In 1995 where former superheroes exist, the murder of a colleague sends active vigilante Rorschach into his own sprawling investigation, uncovering something that could completely change the course of history as we know it.</p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Mystery</span>
+                        <p><%= foundFilms[3].synopsis %></p>
+                        <span class="badge badge-dark"><%= foundFilms[3].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[3].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[3].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Jackie Earle Haley, Patrick Wilson, Carla Gugino</p>
+                        <p class="font-italic"><%= foundFilms[3].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 9.4/10</strong></p>
+                        <p><strong><%= foundFilms[3].rating %></strong></p>
                         <br>
                         <button type="button" class="reviewbtn btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px; border-color:#708090; display:none;" class="review">"This film is the most fascinating graphic novel adaptation that is perfectly complex, dark and absorbing. The film has such a strong plot and talented actors with a powerful sense of style which is utilized by the director in the best way any director could. The director Zack Snyder is actually the star of the film. After watching this film it is safe to say that this film is without a doubt, Zack Snyder’s masterpiece."</div>
+                        <div style= "border-radius:10px; border-color:#708090; display:none;" class="review">"<%= foundFilms[2].review %>"</div>
                      </div>
                   </div>
                </div>
@@ -150,61 +150,6 @@
          <li>
             <a class="list-group-item list-group-item-action list-group-item-dark">
                <div class="movie clearfix">
-                  <img style="float:left;" src="images/Sicario.jpg" class="thumbnail">
-                  <div class="content" style="display:inline;">
-                     <div class="title">
-                        <h3>Sicario: Day of the Soldado</h3>
-                     </div>
-                     <div class="synopsis">
-                        <p> The drug war on the U.S.-Mexico border has escalated as the cartels have begun trafficking terrorists across the US border. To fight the war, federal agent Matt Graver re-teams with the mercurial Alejandro.</p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Crime</span> <span class="badge badge-dark">Drama</span>
-                        <br>
-                        <p class="font-italic">Benicio Del Toro, Josh Brolin, Isabela Moner</p>
-                         <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
-                        <br>
-                        <p><strong>RATING: 9.1/10</strong></p>
-                        <br>
-                        <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"At first, I termed this film as an unnecessary and an unwanted sequel and I was genuinely scared that it would suck. But 30 minutes into this film, I was done putting this movie into my top 10. It is flawless in its dark, realistic atmosphere and action sequences which were not unbelievably nonsense. I missed Emily Blunt in this film but Benicio Del Toro actually carried this film throughout and made this an unforgettable experience."
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-         </li>
-         <br>
-         <br>
-         <li>
-            <a class="list-group-item list-group-item-action list-group-item-dark">
-               <div class="movie clearfix">
-                  <img style="float:left;" src="images/usual suspects.jpg" class="thumbnail">
-                  <div class="content" style="display:inline;">
-                     <div class="title">
-                        <h3>The Usual Suspects</h3>
-                     </div>
-                     <div class="synopsis">
-                        <p> A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.
-                        </p>
-                        <span class="badge badge-dark">Crime</span> <span class="badge badge-dark">Mystery</span> <span class="badge badge-dark">Thriller</span>
-                        <br>
-                        <p class="font-italic">Kevin Spacey, Gabriel Byrne, Chazz Palminteri</p>
-                         <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
-                        <br>
-                        <p><strong>RATING: 9.0/10</strong></p>
-                        <br>
-                        <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"A stone cold classic! But I would suggest you to give this film a second watch before making an opinion out of it. Without giving out too much, I would say this is the film that made Kevin Spacey a star. The film is excellently produced but the only problem with it is that it relies way too much on the surprise ending. It has a great, gritty script with beautifully acted-characters and some other shining qualities which makes ‘The Usual Suspects’ a film worthy of praise."  
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </a>
-         </li>
-         <br>
-         <br>
-         <li>
-            <a class="list-group-item list-group-item-action list-group-item-dark">
-               <div class="movie clearfix">
                   <img style="float:left;" src="images/master.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
@@ -218,10 +163,65 @@
                         <p class="font-italic">Philip Seymour Hoffman, Joaquin Phoenix, Amy Adams</p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 9.0/10</strong></p>
+                        <p><strong>RATING: 9.1/10</strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
                         <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"JOAQUIN PHOENIX! That’s enough. This film cemented Paul Thomas Anderson as one of the most consistent director ever. I would say that the synopsis and the trailer does not do justice to this film. You have to watch it to know what masterpiece this is. The script is strong but what this film really delivers is the acting. Joaquin Phoenix gave his best performance in ‘The Master’ followed by Philip Seymour Hoffman. I feel this duo should’ve starred in more films together because their on-screen chemistry was out of this world."
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+         </li>
+         <br>
+         <br>
+         <li>
+            <a class="list-group-item list-group-item-action list-group-item-dark">
+               <div class="movie clearfix">
+                  <img style="float:left;" src="images/Logan.jpg" class="thumbnail">
+                  <div class="content" style="display:inline;">
+                     <div class="title">
+                        <h3>Logan</h3>
+                     </div>
+                     <div class="synopsis">
+                        <p> In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+                        </p>
+                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Sci-fi</span>
+                        <br>
+                        <p class="font-italic">Hugh Jackman, Patrick Stewart, Dafne Keen</p>
+                         <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
+                        <br>
+                        <p><strong>RATING: 9.0/10</strong></p>
+                        <br>
+                        <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"MARVEL KNOCKED IT OUT OF THE PARK WITH THIS ONE. Not you MCU, you still got a long way to go. Brutally violent, emotional, and character-driven, "Logan" is the Wolverine film I always wanted. I don’t like superhero films like the dreadful Ant-Man sequel which almost made me gouge my eyes out. And there’s something that Zack Snyder recently said, “If you think superheroes don’t kill then you’re living in a dream world.” Just the fact that how extremely dark and violent this film was just makes me jump. Hugh Jackman gave his absolute best in this film and I won’t hesitate saying that I cried at numerous points in this film, It’s that GOOD!"
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </a>
+         </li>
+         <br>
+         <br>
+         <li>
+            <a class="list-group-item list-group-item-action list-group-item-dark">
+               <div class="movie clearfix">
+                  <img style="float:left;" src="images/Sicario.jpg" class="thumbnail">
+                  <div class="content" style="display:inline;">
+                     <div class="title">
+                        <h3>Sicario: Day of the Soldado</h3>
+                     </div>
+                     <div class="synopsis">
+                        <p> The drug war on the U.S.-Mexico border has escalated as the cartels have begun trafficking terrorists across the US border. To fight the war, federal agent Matt Graver re-teams with the mercurial Alejandro.</p>
+                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Crime</span> <span class="badge badge-dark">Drama</span>
+                        <br>
+                        <p class="font-italic">Benicio Del Toro, Josh Brolin, Isabela Moner</p>
+                         <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
+                        <br>
+                        <p><strong>RATING: 9.0/10</strong></p>
+                        <br>
+                        <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
+                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"At first, I termed this film as an unnecessary and an unwanted sequel and I was genuinely scared that it would suck. But 30 minutes into this film, I was done putting this movie into my top 10. It is flawless in its dark, realistic atmosphere and action sequences which were not unbelievably nonsense. I missed Emily Blunt in this film but Benicio Del Toro actually carried this film throughout and made this an unforgettable experience."
                         </div>
                      </div>
                   </div>
@@ -344,29 +344,30 @@
          <li>
             <a class="list-group-item list-group-item-action list-group-item-dark">
                <div class="movie clearfix">
-                  <img style="float:left;" src="images/Logan.jpg" class="thumbnail">
+                  <img style="float:left;" src="images/usual suspects.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Logan</h3>
+                        <h3>The Usual Suspects</h3>
                      </div>
                      <div class="synopsis">
-                        <p> In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+                        <p> A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.
                         </p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Sci-fi</span>
+                        <span class="badge badge-dark">Crime</span> <span class="badge badge-dark">Mystery</span> <span class="badge badge-dark">Thriller</span>
                         <br>
-                        <p class="font-italic">Hugh Jackman, Patrick Stewart, Dafne Keen</p>
+                        <p class="font-italic">Kevin Spacey, Gabriel Byrne, Chazz Palminteri</p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
                         <p><strong>RATING: 8.5/10</strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"MARVEL KNOCKED IT OUT OF THE PARK WITH THIS ONE. Not you MCU, you still got a long way to go. Brutally violent, emotional, and character-driven, "Logan" is the Wolverine film I always wanted. I don’t like superhero films like the dreadful Ant-Man sequel which almost made me gouge my eyes out. And there’s something that Zack Snyder recently said, “If you think superheroes don’t kill then you’re living in a dream world.” Just the fact that how extremely dark and violent this film was just makes me jump. Hugh Jackman gave his absolute best in this film and I won’t hesitate saying that I cried at numerous points in this film, It’s that GOOD!"
+                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"A stone cold classic! But I would suggest you to give this film a second watch before making an opinion out of it. Without giving out too much, I would say this is the film that made Kevin Spacey a star. The film is excellently produced but the only problem with it is that it relies way too much on the surprise ending. It has a great, gritty script with beautifully acted-characters and some other shining qualities which makes ‘The Usual Suspects’ a film worthy of praise."  
                         </div>
                      </div>
                   </div>
                </div>
             </a>
          </li>
+
          <br>
          <br>
          <li>
@@ -506,8 +507,6 @@
                </div>
             </a>
          </li>
-         <br>
-         <br>
          <br>
          <br>
          <li>
