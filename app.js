@@ -41,8 +41,10 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 const postSchema = {
+  date: String,
 	title: String,
-	content: String
+	content: String,
+  image: Array
 };
 
 const Post = mongoose.model("Post", postSchema);
@@ -136,7 +138,6 @@ app.post("/login", function(req, res){
   });
 });
 
-
 // app.post("/", function(req, res){
 
 
@@ -154,9 +155,6 @@ app.post("/login", function(req, res){
 //       });
 //     }
 //   });
-
-
-
 
 app.get("/home", function(req, res){
   if (req.isAuthenticated()){
@@ -181,8 +179,10 @@ app.get("/compose", function(req, res){
 app.post("/compose", function(req, res){
 
    const post = new Post ({
+   date: req.body.date,
    title: req.body.postTitle,
-   content: req.body.postBody
+   content: req.body.postBody,
+   image: req.body.imgurl
  });
 
   post.save(function(err){
@@ -197,8 +197,10 @@ app.get("/posts/:postId", function(req, res){
 	const requestedPostId = req.params.postId;
 	Post.findOne({_id: requestedPostId}, function(err, post){
      res.render("post", {
+      date: post.date,
       title: post.title,
-      content: post.content
+      content: post.content,
+      image: post.image
    });
  });
 } else {

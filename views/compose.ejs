@@ -5,11 +5,15 @@
 
 <h1>Compose</h1>
 <form action="/compose" method="post">
-<div class="form-group">	
+<div class="form-group">
+<label>Day and date</label>
+<input type="text" name="date" class="form-control">	
 <label>Title</label>
 <input type="text" name="postTitle" class="form-control">
 <label>Post</label>
 <textarea name="postBody" cols="40" rows="5" class="form-control"></textarea>
+<label>Image</label>
+<input type="text" name="imgurl" class="form-control" placeholder="Enter Image URL">
 </div>
 <button type="submit" name="button" class="btn btn-primary">Publish</button>
 </form>

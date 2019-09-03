@@ -26,31 +26,27 @@
 		<img src="images/collage.jpg" class="postCollage">
 	</div>
     </a>
-	</div>
-	<div class="box"><a href="/films">
-	<div class="title">
-		<h4>Best Films of All Time</h4>
-	</div>
-	<div class="content">
-		<p>My personal Top Films. Give me your opinion in the comment box.</p>
-		<img src="images/collage.jpg" class="postCollage">
-	</div>
-    </a>
-	</div>
-	
+	</div>	
 </div>
 
 <div class="leftdiv">
 <h3 class="homeTitle">WELCOME TO MY PERSONAL RANTING ARENA!</h3>
-<p class="intro">Where you'll get news and my UNBIASED opinion about everything Films and TV Shows. This is not a place for people who are easily offended if I talk some crap about their favorite films. Feel free to question my opinion in the comments section and I'll get back to you with an answer.  </p>
-
-<% console.log(posts); %> 
+<p class="intro">Where you'll get news and my UNBIASED opinion about everything Films and TV Shows. This is not a place for people who are easily offended if I talk some crap about their favorite films. Feel free to question my opinion in the comments section and I'll get back to you with an answer.
+</p>
+<br>
+<br>
 
 <% posts.forEach(function(post){ %>
-<h1> <%= post.title %> </h1>
-<p> <%= post.content.substring(0, 300) + "..." %><a href="/posts/<%=post._id%>">Read More</a></p>
+<div class="row">
+ <div class="col-8" style="border-style: solid; padding:10px; border-color: #2F4F4F;">
+ 	<img class="post-img" src=<%= post.image[0] %>>
+ <h3> <%= post.title %> </h3>
+ <p class="date"><img style="float:left; padding-right: 10px;" src="https://img.icons8.com/ios-filled/20/000000/calendar.png">
+  <%= post.date %> </p>
+<p style="font-size: 15px;"> <%= post.content.substring(0, 455) + "..." %><a href="/posts/<%=post._id%>">Read More</a></p>
 <% }) %>
-
+ </div>
+</div>
 </div>
 
 
