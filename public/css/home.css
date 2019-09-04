@@ -23,8 +23,9 @@ a:hover {
 	color:white;
 }
 
-h3.rightHeading {
+h4.rightHeading {
 	text-align: center;
+	color:rgb(245, 197, 24);
 }
 
 div.rightdiv {
