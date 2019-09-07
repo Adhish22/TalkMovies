@@ -16,19 +16,19 @@
                   <img style="float:left;" src="images/The Shawshank Redemption.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3><%= foundFilms[i].title %></h3>
+                        <h3><%= foundFilms[0].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> <%= foundFilms[i].synopsis %></p>
-                        <span class="badge badge-dark"><%= foundFilms[i].genre %></span>
+                        <p> <%= foundFilms[0].synopsis %></p>
+                        <span class="badge badge-dark"><%= foundFilms[0].genre %></span>
                         <br>
-                        <p class="font-italic"><%= foundFilms[i].cast %></p>
+                        <p class="font-italic"><%= foundFilms[0].cast %></p>
                         <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong><%= foundFilms[i].rating %></strong></p> 
+                        <p><strong><%= foundFilms[0].rating %></strong></p> 
                         <br>
                         <button type="button" class="reviewbtn btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"<%= foundFilms[i].review %>"</div>
+                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"<%= foundFilms[0].review %>"</div>
                      </div>
                   </div>
                </div>
@@ -108,7 +108,7 @@
                         <p><strong><%= foundFilms[3].rating %></strong></p>
                         <br>
                         <button type="button" class="reviewbtn btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px; border-color:#708090; display:none;" class="review">"<%= foundFilms[2].review %>"</div>
+                        <div style= "border-radius:10px; border-color:#708090; display:none;" class="review">"<%= foundFilms[3].review %>"</div>
                      </div>
                   </div>
                </div>
@@ -122,21 +122,20 @@
                   <img style="float:left;" src="images/BvS.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Batman v Superman: Dawn of Justice</h3>
+                        <h3><%= foundFilms[4].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> Fearing that actions of Superman are left unchecked, Batman takes on the Man of Steel, while the world wrestles with what kind of a hero it really needs.
+                        <p><%= foundFilms[4].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Adventure</span> <span class="badge badge-dark">Fantasy</span>
+                        <span class="badge badge-dark"><%= foundFilms[4].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[4].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[4].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Ben Affleck, Henry Cavill, Amy Adams</p>
+                        <p class="font-italic"><%= foundFilms[4].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 9.3/10</strong></p>
+                        <p><strong><%= foundFilms[4].rating %></strong></p>
                         <br>
                         <button type="button" class="reviewbtn btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"I will be talking about the Ultimate Edition of the film. I would say this is the most under-appreciated superhero film ever made. Zack Snyder carried his expertise from his first superhero film Watchmen and gave us one of the best cinematic experience ever. The dark environment and the strong dialogue delivery is what truly makes this film a masterpiece. The critics worked really hard to fail it and somewhere they did too, but the film still turned out to be a gem despite studio interference.
-                           P.S. I’ll fight anyone who says this film sucked. Bring it on!"
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[4].review %>"
                         </div>
                      </div>
                   </div>
@@ -151,20 +150,20 @@
                   <img style="float:left;" src="images/master.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>The Master</h3>
+                        <h3><%= foundFilms[5].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> A Naval veteran arrives home from war unsettled and uncertain of his future until he is tantalized by The Cause and its charismatic leader.
+                        <p><%= foundFilms[5].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Drama</span>
+                        <span class="badge badge-dark"><%= foundFilms[5].genre %></span>
                         <br>
-                        <p class="font-italic">Philip Seymour Hoffman, Joaquin Phoenix, Amy Adams</p>
+                        <p class="font-italic"><%= foundFilms[5].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 9.1/10</strong></p>
+                        <p><strong><%= foundFilms[5].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"JOAQUIN PHOENIX! That’s enough. This film cemented Paul Thomas Anderson as one of the most consistent director ever. I would say that the synopsis and the trailer does not do justice to this film. You have to watch it to know what masterpiece this is. The script is strong but what this film really delivers is the acting. Joaquin Phoenix gave his best performance in ‘The Master’ followed by Philip Seymour Hoffman. I feel this duo should’ve starred in more films together because their on-screen chemistry was out of this world."
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[5].review %>"
                         </div>
                      </div>
                   </div>
@@ -179,20 +178,20 @@
                   <img style="float:left;" src="images/Logan.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Logan</h3>
+                        <h3><%= foundFilms[6].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+                        <p><%= foundFilms[6].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Sci-fi</span>
+                        <span class="badge badge-dark"><%= foundFilms[6].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[6].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[6].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Hugh Jackman, Patrick Stewart, Dafne Keen</p>
+                        <p class="font-italic"><%= foundFilms[6].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 9.0/10</strong></p>
+                        <p><strong><%= foundFilms[6].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"MARVEL KNOCKED IT OUT OF THE PARK WITH THIS ONE. Not you MCU, you still got a long way to go. Brutally violent, emotional, and character-driven, "Logan" is the Wolverine film I always wanted. I don’t like superhero films like the dreadful Ant-Man sequel which almost made me gouge my eyes out. And there’s something that Zack Snyder recently said, “If you think superheroes don’t kill then you’re living in a dream world.” Just the fact that how extremely dark and violent this film was just makes me jump. Hugh Jackman gave his absolute best in this film and I won’t hesitate saying that I cried at numerous points in this film, It’s that GOOD!"
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[6].review %>"
                         </div>
                      </div>
                   </div>
@@ -207,19 +206,19 @@
                   <img style="float:left;" src="images/Sicario.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Sicario: Day of the Soldado</h3>
+                        <h3><%= foundFilms[7].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> The drug war on the U.S.-Mexico border has escalated as the cartels have begun trafficking terrorists across the US border. To fight the war, federal agent Matt Graver re-teams with the mercurial Alejandro.</p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Crime</span> <span class="badge badge-dark">Drama</span>
+                        <p><%= foundFilms[7].synopsis %></p>
+                        <span class="badge badge-dark"><%= foundFilms[7].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[7].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[7].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Benicio Del Toro, Josh Brolin, Isabela Moner</p>
+                        <p class="font-italic"><%= foundFilms[7].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 9.0/10</strong></p>
+                        <p><strong><%= foundFilms[7].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"At first, I termed this film as an unnecessary and an unwanted sequel and I was genuinely scared that it would suck. But 30 minutes into this film, I was done putting this movie into my top 10. It is flawless in its dark, realistic atmosphere and action sequences which were not unbelievably nonsense. I missed Emily Blunt in this film but Benicio Del Toro actually carried this film throughout and made this an unforgettable experience."
+                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"<%= foundFilms[7].review %>"
                         </div>
                      </div>
                   </div>
@@ -234,19 +233,19 @@
                   <img style="float:left;" src="images/Argo.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Argo</h3>
+                        <h3><%= foundFilms[8].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> Acting under the cover of a Hollywood producer scouting a location for a science fiction film, a CIA Agent launches a dangerous operation to rescue six Americans in Tehran during the U.S. hostage crisis in Iran in 1979.</p>
-                        <span class="badge badge-dark">Biography</span> <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Thriller</span>
+                        <p><%= foundFilms[8].synopsis %></p>
+                        <span class="badge badge-dark"><%= foundFilms[8].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[8].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[8].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Ben Affleck, Bryan Cranston, John Goodman</p>
+                        <p class="font-italic"><%= foundFilms[8].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.8/10</strong></p>
+                        <p><strong><%= foundFilms[8].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"Ben Affleck delivered another amazing film after his previous directorial project ‘The Town’ in which too he played the lead. This film received a lot of hate for being loosely inspired to the real events that happened in Tehran. The biggest task making this film was the subtle placement of comedy to break the tension as the film’s plot is originally very intense. Now after direction, the acting too is top-notch including Affleck himself. I know I say this a lot but Affleck is a gem and he deserves more appreciation. Haters can come fight me in the comments."
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[8].review %>"
                         </div>
                      </div>
                   </div>
@@ -261,20 +260,20 @@
                   <img style="float:left;" src="images/star is born.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>A Star is Born</h3>
+                        <h3><%= foundFilms[9].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> A musician helps a young singer find fame, even as age and alcoholism send his own career into a downward spiral.
+                        <p><%= foundFilms[9].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Music</span> <span class="badge badge-dark">Romance</span>
+                        <span class="badge badge-dark"><%= foundFilms[9].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[9].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[9].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Lady Gaga, Bradley Cooper, Sam Elliott</p>
+                        <p class="font-italic"><%= foundFilms[9].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.7/10</strong></p>
+                        <p><strong><%= foundFilms[9].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"The Bradley Cooper and Lady Gaga starrer shined at the 2019 Oscars and received an Academy Award for the best Original song (Shallow). Now people who’ve watched the previous ‘A Star is Born’ stories or ‘Aashiqui 2’ would know how the story follows but what differs this film from the rest of them is the direction and mainly the acting which shines in Cooper’s version. It was unbelievable that Cooper entered this project as a first time director and the way he made people understand his charm and her vulnerability, and the two actors give side-by-side stellar performances was remarkable. It was nominated for numerous categories and I would say it was deserved it all."
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[9].review %>"
                         </div>
                      </div>
                   </div>
@@ -289,20 +288,20 @@
                   <img style="float:left;" src="images/gone girl.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Gone Girl</h3>
+                        <h3><%= foundFilms[10].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> With his wife's disappearance having become the focus of an intense media circus, a man sees the spotlight turned on him when it's suspected that he may not be innocent.
+                        <p><%= foundFilms[10].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Mystery</span> <span class="badge badge-dark">Thriller</span>
+                        <span class="badge badge-dark"><%= foundFilms[10].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[10].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[10].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Ben Affleck, Rosamund Pike, Neil Patrick Harris</p>
+                        <p class="font-italic"><%= foundFilms[10].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.6/10</strong></p>
+                        <p><strong><%= foundFilms[10].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                         <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"This is one of the most dark and twisted films I’ve ever watched. The visual storytelling in this film is just off the charts. By far one of the best acting performances to have come from Ben Affleck and some strong yet disturbing portrayal from Rosamund Pike. The chilling score of the film keeps you on your toes throughout. And for the people who know me, NO! I didn’t rate this movie so high solely  because of my admiration for Ben Affleck. The performance of the actors alone is enough to engross you deeply into the film and you’ll feel yourself a part of the story by the end."
+                         <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[10].review %>"
                         </div>
                      </div>
                   </div>
@@ -317,20 +316,20 @@
                   <img style="float:left;" src="images/interstellar.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Interstellar</h3>
+                        <h3><%= foundFilms[11].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.
+                        <p><%= foundFilms[11].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Adventure</span> <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Sci-fi</span>
+                        <span class="badge badge-dark"><%= foundFilms[11].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[11].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[11].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
+                        <p class="font-italic"><%= foundFilms[11].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.5/10</strong></p>
+                        <p><strong><%= foundFilms[11].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                         <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"A Visually Monumental and Thoughtful Sci-Fi Epic! I watched this movie all the way through with no bathroom breaks. My interest was grabbed from the start and held all the way through. This movie tells an excellent stand-alone story that is both riveting and believable. I'm not going to give away any secrets but anyone who watches the last five minutes or so without a lump in their throat and a tear in their eye, well you're a critic, you're not enjoying the movie because you're too busy looking for bloopers and faults. A must watch!"
+                         <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[11].review %>"
                         </div>
                      </div>
                   </div>
@@ -345,20 +344,20 @@
                   <img style="float:left;" src="images/usual suspects.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>The Usual Suspects</h3>
+                        <h3><%= foundFilms[12].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.
+                        <p><%= foundFilms[12].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Crime</span> <span class="badge badge-dark">Mystery</span> <span class="badge badge-dark">Thriller</span>
+                        <span class="badge badge-dark"><%= foundFilms[12].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[12].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[12].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Kevin Spacey, Gabriel Byrne, Chazz Palminteri</p>
+                        <p class="font-italic"><%= foundFilms[12].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.5/10</strong></p>
+                        <p><strong><%= foundFilms[12].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"A stone cold classic! But I would suggest you to give this film a second watch before making an opinion out of it. Without giving out too much, I would say this is the film that made Kevin Spacey a star. The film is excellently produced but the only problem with it is that it relies way too much on the surprise ending. It has a great, gritty script with beautifully acted-characters and some other shining qualities which makes ‘The Usual Suspects’ a film worthy of praise."  
+                        <div style= "border-radius:10px;border-color:#708090; display: none;" class="review">"<%= foundFilms[12].review %>"  
                         </div>
                      </div>
                   </div>
@@ -374,20 +373,20 @@
                   <img style="float:left;" src="images/upgrade.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Upgrade</h3>
+                        <h3><%= foundFilms[13].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> Set in the near-future, technology controls nearly all aspects of life.But when Grey, a self-identified technophobe, has his world turned upside down, his only hope for revenge is an experimental computer chip implant called Stem.
+                        <p><%= foundFilms[13].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Sci-fi</span> <span class="badge badge-dark">Thriller</span>
+                        <span class="badge badge-dark"><%= foundFilms[13].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[13].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[13].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Logan Marshall-Green, Melanie Vallejo, Steve Danielsen</p>
+                        <p class="font-italic"><%= foundFilms[13].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.3/10</strong></p>
+                        <p><strong><%= foundFilms[13].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"This is possibly the best AI movie till date. I can't believe it was low budget because it's impossible to tell apart from the unknown actors who all did an excellent job. I will do my best to replace its lack of marketing with recommending it to everyone. I was expecting something entertaining and instead got an amazing plot with a mind-blowing ending. If you enjoy this genre, you can't let this one pass you by. What everyone says is true, it's like a long, perfectly executed Black Mirror episode. From beginning to end, this movie is amazing. I cannot recommend it enough."
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[13].review %>"
                         </div>
                      </div>
                   </div>
@@ -402,20 +401,20 @@
                   <img style="float:left;" src="images/planet of apes.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>War for the Planet of the Apes</h3>
+                        <h3><%= foundFilms[14].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> After the apes suffer unimaginable losses, Caesar wrestles with his darker instincts and begins his own mythic quest to avenge his kind.
+                        <p><%= foundFilms[14].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Adventure</span> <span class="badge badge-dark">Drama</span>
+                        <span class="badge badge-dark"><%= foundFilms[14].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[14].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[14].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Andy Serkis, Woody Harrelson, Steve Zahn</p>
+                        <p class="font-italic"><%= foundFilms[14].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.2/10</strong></p>
+                        <p><strong><%= foundFilms[14].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"So War for the planet of the apes is the 3rd film in the reboot of the planet of the apes movies. And this is about Caeser going on a journey to stop a war between apes and an army of highly trained soldiers, while he also tries to control his more violent instincts. The CGI is amazing and Andy Serkis once again plays the ape ruler Caesar and is easily the best movie character in recent years and in this one it is definitely the best performance. The story is great and is well acted throughout. This movie is also an amazing drama. There are a lot of moments that just make you jerk a tear every once in a while and it’s believable. The action sequences are all perfectly executed too. The overall theme and the color palette of the film is top-notch." 
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[14].review %>" 
                         </div>
                      </div>
                   </div>
@@ -430,20 +429,20 @@
                   <img style="float:left;" src="images/ex machina.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Ex Machina</h3>
+                        <h3><%= foundFilms[15].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p>A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.
+                        <p><%= foundFilms[15].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Mystery</span> <span class="badge badge-dark">Sci-fi</span>
+                        <span class="badge badge-dark"><%= foundFilms[15].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[15].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[15].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Alicia Vikander, Domhnall Gleeson, Oscar Isaac</p>
+                        <p class="font-italic"><%= foundFilms[15].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.1/10</strong></p>
+                        <p><strong><%= foundFilms[15].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"Ex Machina is a dialogue-driven psychological thriller that slowly works it's way under your skin. Thought-provoking and terrifyingly suspenseful, an induced state of paranoia may linger long after the end credits begin to roll. The less you know going into a film like this, the better your experience will be. Alex Garland has given us a modern science-fiction masterpiece. Performances from all three leads are flawless and every other aspect of the production, from the cinematography to the soundtrack, is perfectly suited for the story. A must watch!"
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[15].review %>"
                         </div>
                      </div>
                   </div>
@@ -458,19 +457,19 @@
                   <img style="float:left;" src="images/orphanage.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>The Orphanage</h3>
+                        <h3><%= foundFilms[16].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> A woman brings her family back to her childhood home, which used to be an orphanage for handicapped children. Before long, her son starts to commmunicate with an invisible new friend.</p>
-                        <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Horror</span> <span class="badge badge-dark">Mystery</span>
+                        <p><%= foundFilms[16].synopsis %></p>
+                        <span class="badge badge-dark"><%= foundFilms[16].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[16].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[16].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Belen Rueda, Fernando Cayo, Roger Princep</p>
+                        <p class="font-italic"><%= foundFilms[16].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.1/10</strong></p>
+                        <p><strong><%= foundFilms[16].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"A satisfying thriller on one hand and an equally rich emotional journey on the other. It’s such a stunningly made film, creepy, atmospheric, shocking, great story, beautifully directed, the main woman is incredible. I was never really sure if it was supernatural or psychological, but as it reveals, it’s nothing but excellent. The acting is strong, and the directing, editing, cinematography, and music all work together well. It’s so well done I can’t write more without giving stuff away, but go and see it. Screenwriter Sergio G. Sánchez does a masterful job of balancing the thriller with the drama. Bottom line: even if you don't like "scary" movies (like me), you'll probably still appreciate and enjoy the more thrilling aspects."
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[16].review %>"
                         </div>
                      </div>
                   </div>
@@ -485,20 +484,20 @@
                   <img style="float:left;" src="images/two lovers.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Two Lovers</h3>
+                        <h3><%= foundFilms[17].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> A Brooklyn-set romantic drama about a bachelor torn between the family friend his parents wish he would marry and his beautiful but volatile new neighbor.
+                        <p><%= foundFilms[17].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Drama</span> <span class="badge badge-dark">Romance</span>
+                        <span class="badge badge-dark"><%= foundFilms[17].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[17].genre[1] %></span>
                         <br>
-                        <p class="font-italic">Joaquin Phoenix, Gwyneth Paltrow, Vinessa Shaw</p>
+                        <p class="font-italic"><%= foundFilms[17].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 8.0/10</strong></p>
+                        <p><strong><%= foundFilms[17].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"I wasn't expecting to watch this film because it’s not really my genre. Having no expectations, not having heard or seen any hype about it, I was surprised at how much I enjoyed it. I think all aspects of a *good* film are present. It is beautifully shot and quite brilliantly acted which together created the right, moody, slightly claustrophobic atmosphere for this rather bleak, sometimes humorous, story to progress. It's a triumph for Joaquin Phoenix, who provides a remarkably giving and open performance even though the character he plays, Leonard Kraditor, is opaque. The guy is a pure perfectionist and the way he loses himself in a role is just marvellous. Can’t wait for the Joaquin Phoenix take on the DC Supervillain, THE JOKER!"
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[17].review %>"
                         </div>
                      </div>
                   </div>
@@ -513,21 +512,21 @@
                   <img style="float:left;" src="images/dkr.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>Batman: The Dark Knight Returns, Part 1 & 2</h3>
+                        <h3><%= foundFilms[18].title %></h3>
                      </div>
                      <div class="synopsis">
                         <br>
-                        <p> Batman comes out of retirement and gets help from a teenage sidekick. He faces off against the Joker and Two-Face before a battle to the death begins against Superman.
+                        <p><%= foundFilms[18].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Animation</span> <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Adventure</span>
+                        <span class="badge badge-dark"><%= foundFilms[18].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[18].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[18].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Peter Weller, Ariel Winter, Michael Emerson, David Selby</p>
+                        <p class="font-italic"><%= foundFilms[18].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 7.9/10</strong></p>
+                        <p><strong><%= foundFilms[18].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"This is the animated film comic fans have been waiting for. The events in the film all come together beautifully (and with many surprises) in a well-paced, brilliantly written, thought provoking, elegantly animated, and savagely action-packed epic played out by fascinating characters. The Dark Knight Returns reaffirms that the Legend of the Dark Knight is timeless and can only die when the rest of the human race goes with it. Characters like Joker, Superman, Batman all in a single film. What else do you want? The dark and gritty theme of the film is what differs this film from what animated films MCU makes. Without getting into that, I would say you shouldn’t miss this one."
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[18].review %>"
                         </div>
                      </div>
                   </div>
@@ -542,20 +541,20 @@
                   <img style="float:left;" src="images/purge.jpg" class="thumbnail">
                   <div class="content" style="display:inline;">
                      <div class="title">
-                        <h3>The Purge: Anarchy</h3>
+                        <h3><%= foundFilms[19].title %></h3>
                      </div>
                      <div class="synopsis">
-                        <p> Three groups of people interwine and are left stranded in the streets on Purge Night, trying to survive the chaos and violence that occurs.
+                        <p><%= foundFilms[19].synopsis %>
                         </p>
-                        <span class="badge badge-dark">Action</span> <span class="badge badge-dark">Horror</span> <span class="badge badge-dark">Sci-fi</span>
+                        <span class="badge badge-dark"><%= foundFilms[19].genre[0] %></span> <span class="badge badge-dark"><%= foundFilms[19].genre[1] %></span> <span class="badge badge-dark"><%= foundFilms[19].genre[2] %></span>
                         <br>
-                        <p class="font-italic">Frank Grillo, Carmen Ejogo, Zach Gilford</p>
+                        <p class="font-italic"><%= foundFilms[19].cast %></p>
                          <h2 style="float:right;"><span id="myfresh" style="float:right;" onclick="this.style.color='yellow';" class="badge badge-secondary">Fresh!</span></h2>
                         <br>
-                        <p><strong>RATING: 7.7/10</strong></p>
+                        <p><strong><%= foundFilms[19].rating %></strong></p>
                         <br>
                         <button type="button" class="btn btn-secondary btn-sm reviewBtn">See my review</button>
-                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"I’ve heard this often, "I've never seen a bad movie make a good sequel." Well, the reason is because you never gave the sequel a chance after seeing the first film. I'll admit that the first Purge movie was, for the most part, mediocre and not the best start to the series. But James DeMonaco has heard and answered our cries and made dramatic improvements to the second instalment. The Purge- Anarchy has a gripping plot line, dynamic setting, an unbelievable amount of character development, and a suspense factor that keeps you guessing right down to the last five minutes! And you leave with a fresh understanding of all the pros and cons of legalizing crime for one night a year. Whatever your expectations are going in, I guarantee you no regrets!"
+                        <div style= "border-radius:10px;border-color:#708090; display:none;" class="review">"<%= foundFilms[19].review %>"
                         </div>
                      </div>
                   </div>
