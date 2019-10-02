@@ -8,8 +8,7 @@ const _ = require("lodash");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-// const flash = require("req-flash");
-
+const Swal = require("sweetalert2");
 const app = express();
 
 app.set('view engine', 'ejs');
