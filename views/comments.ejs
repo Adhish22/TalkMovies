@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<%- include("partials/header"); -%>
+
+<form action="/comments" method="post">
+		<div class="form-group">
+			<input type="text" name="userName" class="form-control" placeholder="Enter Your Name">
+			<textarea name="commentBody" cols="40" rows="5" class="form-control"></textarea>
+		</div>
+		<button type="submit" name="button" class="btn btn-primary">Submit</button>
+</form>
+
+<% comments.forEach(function(comments){ %>
+
+<div class="form-group">
+<h4> <%= comments.name %> </h4> 
+<p style="font-size: medium;"> <%= comments.body %> </p>
+</div>
+
+<% }) %>
+
+
+<%- include("partials/footer"); -%>

@@ -8,8 +8,9 @@ const _ = require("lodash");
 const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
-const Swal = require("sweetalert2");
+
 const app = express();
+const io = require("socket.io");
 
 app.set('view engine', 'ejs');
 
@@ -37,7 +38,7 @@ const User = new mongoose.model("User", userSchema);
 passport.use(User.createStrategy());
 
 passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+passport.deserializeUser(User.deserializeUser()); 
 
 const postSchema = {
   date: String,
@@ -47,6 +48,13 @@ const postSchema = {
 };
 
 const Post = mongoose.model("Post", postSchema);
+
+const commentSchema = new mongoose.Schema({
+  name: String,
+  body: String,
+});
+
+const Comments = mongoose.model("Comments", commentSchema);
 
 const filmSchema = new mongoose.Schema({
   title: String,
@@ -165,6 +173,31 @@ app.get("/home", function(req, res){
   } else {
     res.redirect("/login");
   } 
+});
+
+app.get("/comments", function(req, res){
+  if (req.isAuthenticated()){
+    Comments.find({}, function(err, comments){
+    res.render("comments", {
+      comments: comments
+      });
+  });
+  } else {
+    res.redirect("/login");
+  } 
+});
+
+app.post("/comments", function(req, res){
+  const comment = new Comments({
+    name: req.body.userName,
+    body: req.body.commentBody
+  });
+
+ comment.save(function(err){
+    if (!err){
+        res.redirect("/comments");
+    }
+  });
 });
 
 app.get("/compose", function(req, res){
